@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "analesthetics"
+version = "0.1.0"
+description = "Quantitative diagnostics for drawings: measure first, explain second."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Chen Tingjun" }]
+keywords = ["computer-vision", "art-analysis", "opencv", "image-metrics"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Multimedia :: Graphics",
+]
+
+dependencies = [
+    "numpy>=1.24",
+    "opencv-python>=4.8",
+]
+
+[project.urls]
+Homepage = "https://profyangshengxu.github.io/analesthetics.html"
+
+[project.scripts]
+analesthetics = "analesthetics.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["analesthetics*"]
